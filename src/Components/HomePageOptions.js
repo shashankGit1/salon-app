@@ -9,6 +9,9 @@ const useStyles=makeStyles(()=>({
         marginTop:'22%',
         display:'flex',
         height:'40vh',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems:'flex-start',
         backgroundColor:'#ffffff',
     },
     optionList:{
@@ -59,16 +62,27 @@ export default function HomePageOptions() {
 
         },
         {
+            imgUrl:'https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png',
+            name:'Salon for Women'
+
+        },
+        {
+            imgUrl:'https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png',
+            name:'Salon for Women'
+
+        },
+        {
         imgUrl:'https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png',
         name:'Salon for Men'
         },
         {
             imgUrl:'https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png',
             name:'Salon for Men'
-        },
+        }
+        
     ]
     return (
-        <div className={classes.optionContainer}>
+        <div className={classes.optionContainer} >
             
             {options.map(url=>(
                 <div className={classes.optionList}>

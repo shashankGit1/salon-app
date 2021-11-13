@@ -27,28 +27,21 @@ const useStyles=makeStyles(()=>({
       
     }
 
-  
- 
-
 }));
 
-export default function Navbar() {
+export default function Navbar({clickHandler}) {
     const classes=useStyles();
     return (
         <div className={classes.navbarContainer}>
             <div>
             <Button  className={classes.navbarButton}>One Call Problem Solve </Button>
             </div>
-             
-            
-            
-        
+                     
             <div className={classes.rightButton}>
                 <Button className={classes.navbarButton}>Register As A Professionals</Button>
-                <Button className={classes.navbarButton} style={{paddingLeft:'30px'}}>Login / Sign Up</Button>
-                
-
+                <Button className={classes.navbarButton} style={{paddingLeft:'30px'}} onClick={()=>{clickHandler(true)}}> Login / Sign Up</Button>
             </div>
         </div>
     )
 }
+
